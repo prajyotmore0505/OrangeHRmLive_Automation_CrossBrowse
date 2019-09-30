@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [CrossbrowserTesting]">
+  <parameter name="browser" value="IE"/>
+  <test name="FirefoxTest">
+    <parameter name="browser" value="Firefox"/>
+    <packages>
+      <package name="test"/>
+    </packages>
+    <classes>
+      <class name="test.LoginTest"/>
+    </classes>
+  </test> <!-- FirefoxTest -->
+  <test name="ChromeTest">
+    <parameter name="browser" value="Chrome"/>
+    <packages>
+      <package name="test"/>
+    </packages>
+    <classes>
+      <class name="test.LoginTest"/>
+    </classes>
+  </test> <!-- ChromeTest -->
+  <test name="IETest">
+    <parameter name="browser" value="IE"/>
+    <packages>
+      <package name="test"/>
+    </packages>
+    <classes>
+      <class name="test.LoginTest"/>
+    </classes>
+  </test> <!-- IETest -->
+  <test name="FirefoxTest(failed)">
+    <parameter name="browser" value="Firefox"/>
+    <classes>
+      <class name="test.LoginTest">
+        <methods>
+          <include name="LoginTestMethod" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- test.LoginTest -->
+    </classes>
+  </test> <!-- FirefoxTest(failed) -->
+  <test name="IETest(failed)">
+    <parameter name="browser" value="IE"/>
+    <classes>
+      <class name="test.LoginTest">
+        <methods>
+          <include name="LoginTestMethod" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- test.LoginTest -->
+    </classes>
+  </test> <!-- IETest(failed) -->
+</suite> <!-- Failed suite [CrossbrowserTesting] -->
